@@ -3,7 +3,7 @@ provider "aws" {
   
 }
 
-resource "aws_instance" "name" {
+resource "aws_instance" "one" {
     count = length(var.instance_count)
     ami = "ami-052064a798f08f0d3"
     instance_type = var.instance_type[count.index]

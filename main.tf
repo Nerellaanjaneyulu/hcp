@@ -13,10 +13,10 @@ resource "aws_instance" "one" {
 
 
 variable "instance_type" {
-  default = ["t3.micro", "t3.small",]
+  default = ["t3.micro"]
 }
 
 variable "instance_name" {
-  default = ["dev-server", "test-server",]
+  default = ["dev-server"]
 }
 

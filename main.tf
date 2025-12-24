@@ -4,7 +4,7 @@ provider "aws" {
 
 resource "aws_instance" "one" {
   count         = length(var.instance_type)
-  ami           = "ami-052064a798f08f0d3"
+  ami           = "ami-068c0051b15cdb816"
   instance_type = var.instance_type[count.index]
   tags = {
     Name = var.instance_name[count.index]
@@ -17,6 +17,6 @@ variable "instance_type" {
 }
 
 variable "instance_name" {
-  default = ["dev-server"]
+  default = ["Ansible", "dev-1", "dev-2", "test-1", "test-2"]
 }
 
